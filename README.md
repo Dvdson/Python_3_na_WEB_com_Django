@@ -139,7 +139,7 @@ Demonstração dos metodos usados dentro da classe models. nem um procedimento d
 - Por causa da Atualização do Django, para realizar o equivalente a sqlall da versão antiga usa-se este [procedimento](#pr_14_sqlall_deprecated).
 - [Importante] Acessando Model.objects.all() ele retorna um modo de acesso a todos os objetos criados porém ele não faz a consulta no BD ainda, para isso usa-se os métodos nele.
 - [Importante] O Método Model.objects.filter() retorna o mesmo modo de acesso, porém filtrado via [lookups](https://docs.djangoproject.com/en/2.0/ref/models/lookups/).
-- model_name.objects é um object tipo manager.
+- model_name.objects é um object tipo manager. 
 <!-- Criando uma aula
 #### <a name="aula_x"></a>Aula x
 ---
