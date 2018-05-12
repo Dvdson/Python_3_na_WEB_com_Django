@@ -104,10 +104,10 @@ Esta aula tem o objetivo criar models para manipular o banco de dados sem a util
 ---
 
 ##### Descrição:
-Demonstração dos metodos usados dentro da classe models. nem um procedimento de alteração nesta aula.
+Demonstração dos metodos usados dentro da classe models. nem um procedimento de alteração nesta aula. Apenas demonstração dos métodos do django.
 ##### Procedimentos:
 
-##### <a name="notas_x"></a>Notas:
+##### <a name="notas_13"></a>Notas:
 
 - Não apagar o banco de dados como dito em aula, A nova versão de Django faz comparação de informações com o banco e muda, sem precisar remover diretamente
 - Método save() em models, é extremamente importante pois é ele que lança a informação do modelo no banco de dados do Django.
@@ -115,6 +115,31 @@ Demonstração dos metodos usados dentro da classe models. nem um procedimento d
 - Os objetos models são relacionados as suas respectivas linhas de banco de dados no django
 - Por enquanto não foi ensinado como modificar models via uso de id.
 
+#### <a name="aula_14"></a>Aula 14
+---
+
+##### Descrição:
+
+##### Procedimentos:
+1. <a name="pr_14_sqlall_deprecated"></a> Procedimento alternativo ao sqlall
+    ```bash
+    $ py manage.py showmigrations
+    ```
+    - Este comando irá mostrar a lista de migrations executadas agrupadas por app
+    - Procure seu app e lá terá todos os nomes das modificações feitas pelas migrações, então execute:
+    ```bash
+    $ py manage.py sqlmigrate app_name migrate_name
+    ```
+    - O resultado será o comando sql para realizar a migração do código.
+
+2. O acesso e manipulação do dos objetos do django dar-se na utilização do objeto do model_name.objects.método(), consultar tudo (all()), filtrar (filter(lookups)).
+
+##### <a name="notas_14"></a>Notas
+- [Mais uma vez](#notas_13) não apagar banco de dados como mostrado na aula.
+- Por causa da Atualização do Django, para realizar o equivalente a sqlall da versão antiga usa-se este [procedimento](#pr_14_sqlall_deprecated).
+- [Importante] Acessando Model.objects.all() ele retorna um modo de acesso a todos os objetos criados porém ele não faz a consulta no BD ainda, para isso usa-se os métodos nele.
+- [Importante] O Método Model.objects.filter() retorna o mesmo modo de acesso, porém filtrado via [lookups](https://docs.djangoproject.com/en/2.0/ref/models/lookups/).
+- model_name.objects é um object tipo manager.
 <!-- Criando uma aula
 #### <a name="aula_x"></a>Aula x
 ---
