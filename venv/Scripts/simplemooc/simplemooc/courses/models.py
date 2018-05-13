@@ -1,5 +1,13 @@
 from django.db import models
 
+class CourseManager(models.Manager):
+    def search(self,query):
+        return self.get_queryset().filter( # com o models.Q é possível fazer comtrole lógico nas consultas
+            models.Q(name__icontains=query) | \
+            models.Q(description__icontains=query)
+        )
+
+
 # Create your models here.
 class Course(models.Model):
     name = models.CharField('Nome', max_length=100)
@@ -17,3 +25,5 @@ class Course(models.Model):
     Updated_at = models.DateTimeField(
         'Atualizado em', auto_now=True
     )
+
+    objects = CourseManager()
