@@ -6,9 +6,9 @@ Projeto Realizadado seguindo os procedimentos da aula [Python 3 na Web_com_Djang
 
 + [Ferramentas e Versões](#ferramentas_e_versoes)
 + [Procedimentos de Aulas](#procedimentos_de_aulas)
-  - [Sessão 1](sessao_1)
-  - [Sessão 2](sessao_2)
-  - [Sessão 3](sessao_3)
+  - [Sessão 1](#sessao_1)
+  - [Sessão 2](#sessao_2)
+  - [Sessão 3](#sessao_3)
 
 
 
@@ -91,13 +91,13 @@ Criei este projeto a partir desta aula.
 ----
 
 #### Índice
-- [Aula 12](#aula_12)
-- [Aula 13](#aula_13)
-- [Aula 14](#aula_14)
-- [Aula 15](#aula_15)
-- [Aula 16](#aula_16)
-- [Aula 17](#aula_17)
-- [Aula 18](#aula_18)
+1. [Aula 12](#aula_12)
+2. [Aula 13](#aula_13)
+3. [Aula 14](#aula_14)
+4. [Aula 15](#aula_15)
+5. [Aula 16](#aula_16)
+6. [Aula 17](#aula_17)
+7. [Aula 18](#aula_18)
 
 ##### <a name="aula_12"></a>Aula 12
 ---
@@ -209,6 +209,27 @@ Ou seja a subpasta simplemooc agora é a pasta padrão.
 ---
 #### Índice
 
+1. [aula 19](#aula_19)
+
+##### <a name="aula_19"></a>Aula 19
+---
+
+###### Descrição:
+Criando a interface de views dos Cursos
+###### Procedimentos:
+1. Quando solicitar para edição de url, usar esta [referencia](#notas 11) como procedimento
+###### <a name="notas_19"></a>Notas
+
+##### <a name="aula_20"></a>Aula 20
+---
+
+###### Descrição:
+Criando uma listagem dos cursos na Página Cursos
+###### Procedimentos:
+
+##### <a name="notas_20"></a>Notas
+- Referencia para [tags](https://docs.djangoproject.com/pt-br/2.0/ref/templates/builtins/)
+
 
 <!--
 Criando uma Sessão
@@ -227,7 +248,7 @@ Crie uma descrição
 ###### Procedimentos:
 1. digite os procedimentos
 2. siga sem detalhes
-##### <a name="notas_xn"></a>Notas
+###### <a name="notas_xn"></a>Notas
 preencha caso precise.
 
 
