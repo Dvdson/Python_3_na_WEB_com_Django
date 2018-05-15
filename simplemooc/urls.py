@@ -22,8 +22,6 @@ urlpatterns = [
     path('', include('simplemooc.core.urls', namespace='core')),
     path('cursos/', include('simplemooc.courses.urls', namespace='cursos')),
     path('admin/', admin.site.urls)
-
-
 ]
 
 if settings.DEBUG:

@@ -15,9 +15,10 @@ Including another URLconf
 """
 
 from django.urls import path
-from simplemooc.courses.views import index
+from simplemooc.courses.views import index, details
 
-app_name = 'courses'
+app_name = 'courses' # namespace em django 2
 urlpatterns = [
     path('', index, name="index"),
+    path('<slug:slug>/', details, name='details') # acredito que tenha sido melhor usar slug ao invés da id do curso.
 ]

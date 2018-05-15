@@ -5,6 +5,7 @@ Projeto Realizadado seguindo os procedimentos da aula [Python 3 na Web_com_Djang
 ## Índice
 
 + [Ferramentas e Versões](#ferramentas_e_versoes)
++ [Notas Pessoais](#notas_pessoais)
 + [Procedimentos de Aulas](#procedimentos_de_aulas)
   - [Sessão 1](#sessao_1)
   - [Sessão 2](#sessao_2)
@@ -19,6 +20,8 @@ Projeto Realizadado seguindo os procedimentos da aula [Python 3 na Web_com_Djang
   - [Atom](https://atom.io/)
   - [SQLite Studio 3.1.1](https://sqlitestudio.pl/index.rvt?act=download)
 
+## <a name="notas_pessoais"></a>Notas Pessoais
+- Django 2 carece de uma forma de deletar os dados do banco de dados ou um app completamente de forma segura ou simples, a vários métodos na internet sobre isso, mas nem um deles é uma extensão de comandos ou plugins para django que realize o procedimento de forma automatizada. Depois realizar uma pesquisa melhor sobre, talvez encontre uma forma.
 
 
 ## <a name="procedimentos_de_aulas"></a>Procedimentos De Aulas
@@ -226,10 +229,83 @@ Criando a interface de views dos Cursos
 ###### Descrição:
 Criando uma listagem dos cursos na Página Cursos
 ###### Procedimentos:
-
+1. Nem um procedimento que requer atenção. Igual a aula.
 ##### <a name="notas_20"></a>Notas
-- Referencia para [tags](https://docs.djangoproject.com/pt-br/2.0/ref/templates/builtins/)
+- Referencia para [tags e filtros](https://docs.djangoproject.com/pt-br/2.0/ref/templates/builtins/)
 
+##### <a name="aula_21"></a>Aula 21
+---
+
+###### Descrição:
+Requisição de imagens do banco de dados para a interface html.
+###### Procedimentos:
+1. Nem um procedimento que requer atenção. Igual a aula.
+###### <a name="notas_21"></a>Notas
+- A imagem carregada pelos modulos são copiados em uma pasta "/media/"
+- É preciso configurar o arquivo settings para poder "servir" os dados dentro de media
+- Estranhamente, a pasta media fica no projeto principal do Django, não na pasta do app
+
+##### <a name="aula_22"></a>Aula 22
+---
+
+###### Descrição:
+Criando a página de um único curso
+###### Procedimentos:
+1. NÃO apagar a Tabela, Usar o [migrate](https://docs.djangoproject.com/en/2.0/topics/migrations/) para auterar o banco.
+2. Expressão regular em URL foi mudada para [URLDispacher](https://docs.djangoproject.com/en/2.0/topics/http/urls/), logo o procedimento foi alterado. O modelo é apresentado em [notas](#notas_22), quanto ao que acontece depois a aula segue igual.
+###### <a name="notas_22"></a>Notas
+ - A diferença no uso de expressão regular é mostrado a seguir
+   - Apresentado em aula:
+     ```Python
+      # File /courses/urls.py
+      from django.conf.urls import patterns, include, url
+
+      urlpatterns = patterns('simplemooc.courses.views',
+          url(r'^$', 'index', name='index'),
+          url(r'^(?P<pk>\d+)/$', 'details', name='details')
+      )
+     ```
+   - Código em Django 2:
+     ```Python
+      # File /courses/urls.py
+      from django.urls import path
+      from simplemooc.courses.views import index, details
+
+      app_name = 'courses' # namespace
+      urlpatterns = [
+          path('', index, name="index"),
+          path('<int:pk>', details, name='details')# acredito que tenha sido melhor usar slug ao invés da id do curso.
+      ]
+     ```
+- Acredito que exista uma forma mais adequada de tratar expressões regulares em django 2, porém seguirei a aula.
+
+##### <a name="aula_23"></a>Aula 23
+---
+
+###### Descrição:
+Editando a página de curso
+###### Procedimentos:
+1. Nem um procedimento que requer atenção. Igual a aula.
+###### <a name="notas_23"></a>Notas
+
+
+##### <a name="aula_24"></a>Aula 24
+---
+
+###### Descrição:
+Alterando a expressão regular para aceitar slugs como url e definindo get_absolute_url.
+###### Procedimentos:
+1. como apresentado em [notas 22](#notas_22) procedimento de expressão regular na url é diferente ver nas notas a baixo.
+###### <a name="notas_24"></a>Notas
+- Como dito na aula anterior, URLDispacher foi atualizado, permitindo um expressão regular melhor neste caso, a expressão regular com slug muda para apenas slug
+  - Apresentado em aula:
+    ```Python
+         url(r'^(?P<slug>[\w_-])/$', 'details', name='details')
+    ```
+  - Código em Django 2:
+    ```Python
+         path('<slug:slug>', details, name='details')
+    ```
 
 <!--
 Criando uma Sessão
