@@ -213,6 +213,18 @@ Ou seja a subpasta simplemooc agora é a pasta padrão.
 #### Índice
 
 1. [aula 19](#aula_19)
+2. [aula 20](#aula_20)
+3. [aula 21](#aula_21)
+4. [aula 22](#aula_22)
+5. [aula 23](#aula_23)
+6. [aula 24](#aula_24)
+7. [aula 25](#aula_25)
+8. [aula 26](#aula_26)
+9. [aula 27](#aula_27)
+10. [aula 28](#aula_28)
+11. [aula 29](#aula_29)
+12. [aula 30](#aula_30)
+13. [aula 31](#aula_31)
 
 ##### <a name="aula_19"></a>Aula 19
 ---
@@ -341,12 +353,58 @@ Uso de forms no template do django
 ---
 
 ###### Descrição:
-Submissão de formulários do python
+Submissão de formulários do Django
 ###### Procedimentos:
 1. Nem um procedimento que requer atenção. Igual a aula.
 ###### <a name="notas_28"></a>Notas
 - Sempre que houver uma requisição na url dos detalhes do curso, django vai invocar o método details() em Course/views.py como definido em course/urls.py e lá pode ser tratado o tipo de request verificando request.method.
 - Quando o método is_valid() é executado, o acesso aos campos de form acontecem apenas via método cleaned_data que é um array associativo.
+
+##### <a name="aula_29"></a>Aula 29
+---
+
+###### Descrição:
+Introdução para envio de E-mail, usando a submissão de formulários.
+###### Procedimentos:
+1. Nem um procedimento que requer atenção. Igual a aula.
+###### <a name="notas_29"></a>Notas
+- É preciso adicionar os dados em settings.py.
+  - uma configuração a se prestar atenção é:
+    ```Python
+    # padrão de Django, define que irá usar um servidor smtp para lançar o email
+    # TODO procurar como configurar o servidor padrão smtp
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    # para exibir no console, exemplo utilizado neste projeto
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    ```
+
+##### <a name="aula_30"></a>Aula 30
+---
+
+###### Descrição:
+Configurando exibição envio de e-mail.
+###### Procedimentos:
+1. Nem um procedimento que requer atenção. Igual a aula.
+###### <a name="notas_30"></a>Notas
+- Não escreva funções muito grandes na views.py, o ideal é que ela seja a mais limpa possível
+- [```send_mail```](https://docs.djangoproject.com/en/2.0/topics/email/#send-mail) é uma função padrão de django, ver comentários para mais informações em forms para mais informações
+- As informações de envio de email podem ser encontradas [aqui](https://docs.djangoproject.com/en/2.0/topics/email/)
+
+##### <a name="aula_31"></a>Aula 31
+---
+
+###### Descrição:
+Criando uma organização de envio de e-mails com Templates
+###### Procedimentos:
+1. O instrutor da aula criou o arquivo /core/mail.py e o editou completamente, antes da aula.
+2. Deve-se baixar e extrair o mail.py do arquivo no site para sua pasta core.
+###### <a name="notas_31"></a>Notas
+- Este método, lança um modelo html como email, podendo gerar e-mails interativos.
+
+### <a name="sessao_4"></a>Sessão 4
+---
+#### Índice
+
 
 
 
