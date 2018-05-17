@@ -307,6 +307,49 @@ Alterando a expressão regular para aceitar slugs como url e definindo get_absol
          path('<slug:slug>', details, name='details')
     ```
 
+##### <a name="aula_25"></a>Aula 25
+---
+
+###### Descrição:
+Apenas uma introdução a [forms](https://docs.djangoproject.com/en/2.0/topics/forms/) do django
+###### Procedimentos:
+1. Nem um procedimento.
+###### <a name="notas_25"></a>Notas
+- Django tem sua própria formulação de formulários, o que quer dizer que são criados via classes similar ao models, porém direcionado a exibição e captura de dados no site.
+
+##### <a name="aula_26"></a>Aula 26
+---
+
+###### Descrição:
+Criando um model e manipulando via shell
+###### Procedimentos:
+1. Nem um procedimento que requer atenção. Igual a aula.
+###### <a name="notas_26"></a>Notas
+- forms possui [opções de Renderização](https://docs.djangoproject.com/en/2.0/topics/forms/#form-rendering-options)
+
+##### <a name="aula_27"></a>Aula 27
+---
+
+###### Descrição:
+Uso de forms no template do django
+###### Procedimentos:
+1. Nem um procedimento que requer atenção. Igual a aula.
+###### <a name="notas_27"></a>Notas
+- a tag [csrf_token](https://docs.djangoproject.com/en/2.0/ref/csrf/) é um modelo de defesa contra [csrt](https://pt.wikipedia.org/wiki/Cross-site_request_forgery)
+
+##### <a name="aula_28"></a>Aula 28
+---
+
+###### Descrição:
+Submissão de formulários do python
+###### Procedimentos:
+1. Nem um procedimento que requer atenção. Igual a aula.
+###### <a name="notas_28"></a>Notas
+- Sempre que houver uma requisição na url dos detalhes do curso, django vai invocar o método details() em Course/views.py como definido em course/urls.py e lá pode ser tratado o tipo de request verificando request.method.
+- Quando o método is_valid() é executado, o acesso aos campos de form acontecem apenas via método cleaned_data que é um array associativo.
+
+
+
 <!--
 Criando uma Sessão
 
