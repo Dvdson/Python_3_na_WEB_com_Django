@@ -13,17 +13,15 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path, include
-from django.conf import settings
-from django.conf.urls.static import static
 
+from django.urls import path
+from django.contrib.auth.views import login, logout
+from simplemooc.accounts.views import register
+
+
+app_name = 'accounts'
 urlpatterns = [
-    path('', include('simplemooc.core.urls', namespace='core')),
-    path('conta/', include('simplemooc.accounts.urls', namespace='accounts')),
-    path('cursos/', include('simplemooc.courses.urls', namespace='cursos')),
-    path('admin/', admin.site.urls)
+    path('entrar/', login,{'template_name': 'accounts/login.html'}, name="login"),
+    path('sair/', logout,{'next_page': 'core:index'}, name="logout"),
+    path('cadastre-se/', register, name="register")
 ]
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -25,15 +25,15 @@ Projeto Realizadado seguindo os procedimentos da aula [Python 3 na Web_com_Djang
 
 
 ## <a name="procedimentos_de_aulas"></a>Procedimentos De Aulas
-
+---
 ### <a name="sessao_1"></a>Sessão 1
-
+---
 ##### Índice
 
   - [Até a Aula 11](#aula_11)
-
+---
 ##### <a name="aula_11"></a>Até a aula 11
-___
+
 ###### Descrição:
 
 Criei este projeto a partir desta aula.
@@ -88,9 +88,8 @@ Criei este projeto a partir desta aula.
         ]
 
         ```
-
+---
 ### <a name="sessao_2"></a>Sessão 2
-
 ----
 
 #### Índice
@@ -102,8 +101,8 @@ Criei este projeto a partir desta aula.
 6. [Aula 17](#aula_17)
 7. [Aula 18](#aula_18)
 
-##### <a name="aula_12"></a>Aula 12
 ---
+##### <a name="aula_12"></a>Aula 12
 
 ###### Descrição:
 Esta aula tem o objetivo criar models para manipular o banco de dados sem a utilização de comandos de banco de dados
@@ -120,8 +119,8 @@ Esta aula tem o objetivo criar models para manipular o banco de dados sem a util
   > $ pip install Pillow
 
 
+  ---
 ##### <a name="aula_13"></a>Aula 13
----
 
 ###### Descrição:
 Demonstração dos metodos usados dentro da classe models. nem um procedimento de alteração nesta aula. Apenas demonstração dos métodos do django.
@@ -135,8 +134,8 @@ Demonstração dos metodos usados dentro da classe models. nem um procedimento d
 - Os objetos models são relacionados as suas respectivas linhas de banco de dados no django
 - Por enquanto não foi ensinado como modificar models via uso de id.
 
-##### <a name="aula_14"></a>Aula 14
 ---
+##### <a name="aula_14"></a>Aula 14
 
 ###### Descrição:
 
@@ -161,8 +160,8 @@ Demonstração dos metodos usados dentro da classe models. nem um procedimento d
 - [Importante] O Método Model.objects.filter() retorna o mesmo modo de acesso, porém filtrado via [lookups](https://docs.djangoproject.com/en/2.0/ref/models/lookups/).
 - model_name.objects é um object tipo manager.
 
-##### <a name="aula_15"></a>Aula 15
 ---
+##### <a name="aula_15"></a>Aula 15
 
 ###### Descrição:
 Aula sobre Custom [Manager](https://docs.djangoproject.com/en/2.0/topics/db/managers/)
@@ -172,8 +171,8 @@ Aula sobre Custom [Manager](https://docs.djangoproject.com/en/2.0/topics/db/mana
 - É possível fazer um controle lógico avançado na consulta ao banco com models.Q.
 - Detalhe, a consulta é sensível a caixa.
 
-##### <a name="aula_16"></a>Aula 16
 ---
+##### <a name="aula_16"></a>Aula 16
 
 ###### Descrição:
 Aula Sobre [admin](https://docs.djangoproject.com/en/2.0/ref/contrib/admin/) e como fazer um admin administrar models criados.
@@ -182,8 +181,8 @@ Aula Sobre [admin](https://docs.djangoproject.com/en/2.0/ref/contrib/admin/) e c
 ###### <a name="notas_16"></a>Notas
 - Utilizar o admin.site.register dentro de admin.py, para que o user admin possa alterar via interface.
 
-##### <a name="aula_17"></a>Aula 17
 ---
+##### <a name="aula_17"></a>Aula 17
 
 ###### Descrição:
 continuação da aula sobre adimin.
@@ -194,8 +193,8 @@ continuação da aula sobre adimin.
 - Classe [META](https://docs.djangoproject.com/en/2.0/ref/models/options/) __dentro__ do model criado é usado para mudar os dados META do modelo.
 - Um [ModelAdmin](https://docs.djangoproject.com/en/2.0/ref/contrib/admin/#modeladmin-options) pode ser usado para mudar a interface da model associada a mesma.
 
-##### <a name="aula_18"></a>Aula 18
 ---
+##### <a name="aula_18"></a>Aula 18
 
 ###### Descrição:
 Aula sobre edição de models adicionados ao admin via interface.
@@ -204,10 +203,12 @@ Aula sobre edição de models adicionados ao admin via interface.
 ###### <a name="notas_18"></a>Notas
 - prepopulated_fields é uma variável interessante para dar valores iniciais as variáveis de model, ao que parece usa um array associativo.
 
+---
 ```
 A partir desta aula e do commit "aula 18" o repositório do git foi mudado para incluir apenas o projeto DJANGO.
 Ou seja a subpasta simplemooc agora é a pasta padrão.
 ```
+---
 ### <a name="sessao_3"></a>Sessão 3
 ---
 #### Índice
@@ -226,8 +227,8 @@ Ou seja a subpasta simplemooc agora é a pasta padrão.
 12. [aula 30](#aula_30)
 13. [aula 31](#aula_31)
 
-##### <a name="aula_19"></a>Aula 19
 ---
+##### <a name="aula_19"></a>Aula 19
 
 ###### Descrição:
 Criando a interface de views dos Cursos
@@ -235,8 +236,8 @@ Criando a interface de views dos Cursos
 1. Quando solicitar para edição de url, usar esta [referencia](#notas 11) como procedimento
 ###### <a name="notas_19"></a>Notas
 
-##### <a name="aula_20"></a>Aula 20
 ---
+##### <a name="aula_20"></a>Aula 20
 
 ###### Descrição:
 Criando uma listagem dos cursos na Página Cursos
@@ -245,8 +246,8 @@ Criando uma listagem dos cursos na Página Cursos
 ##### <a name="notas_20"></a>Notas
 - Referencia para [tags e filtros](https://docs.djangoproject.com/pt-br/2.0/ref/templates/builtins/)
 
-##### <a name="aula_21"></a>Aula 21
 ---
+##### <a name="aula_21"></a>Aula 21
 
 ###### Descrição:
 Requisição de imagens do banco de dados para a interface html.
@@ -257,8 +258,8 @@ Requisição de imagens do banco de dados para a interface html.
 - É preciso configurar o arquivo settings para poder "servir" os dados dentro de media
 - Estranhamente, a pasta media fica no projeto principal do Django, não na pasta do app
 
-##### <a name="aula_22"></a>Aula 22
 ---
+##### <a name="aula_22"></a>Aula 22
 
 ###### Descrição:
 Criando a página de um único curso
@@ -291,8 +292,8 @@ Criando a página de um único curso
      ```
 - Acredito que exista uma forma mais adequada de tratar expressões regulares em django 2, porém seguirei a aula.
 
-##### <a name="aula_23"></a>Aula 23
 ---
+##### <a name="aula_23"></a>Aula 23
 
 ###### Descrição:
 Editando a página de curso
@@ -301,8 +302,8 @@ Editando a página de curso
 ###### <a name="notas_23"></a>Notas
 
 
-##### <a name="aula_24"></a>Aula 24
 ---
+##### <a name="aula_24"></a>Aula 24
 
 ###### Descrição:
 Alterando a expressão regular para aceitar slugs como url e definindo get_absolute_url.
@@ -319,8 +320,8 @@ Alterando a expressão regular para aceitar slugs como url e definindo get_absol
          path('<slug:slug>', details, name='details')
     ```
 
+    ---
 ##### <a name="aula_25"></a>Aula 25
----
 
 ###### Descrição:
 Apenas uma introdução a [forms](https://docs.djangoproject.com/en/2.0/topics/forms/) do django
@@ -329,8 +330,8 @@ Apenas uma introdução a [forms](https://docs.djangoproject.com/en/2.0/topics/f
 ###### <a name="notas_25"></a>Notas
 - Django tem sua própria formulação de formulários, o que quer dizer que são criados via classes similar ao models, porém direcionado a exibição e captura de dados no site.
 
-##### <a name="aula_26"></a>Aula 26
 ---
+##### <a name="aula_26"></a>Aula 26
 
 ###### Descrição:
 Criando um model e manipulando via shell
@@ -339,8 +340,8 @@ Criando um model e manipulando via shell
 ###### <a name="notas_26"></a>Notas
 - forms possui [opções de Renderização](https://docs.djangoproject.com/en/2.0/topics/forms/#form-rendering-options)
 
-##### <a name="aula_27"></a>Aula 27
 ---
+##### <a name="aula_27"></a>Aula 27
 
 ###### Descrição:
 Uso de forms no template do django
@@ -349,8 +350,8 @@ Uso de forms no template do django
 ###### <a name="notas_27"></a>Notas
 - a tag [csrf_token](https://docs.djangoproject.com/en/2.0/ref/csrf/) é um modelo de defesa contra [csrt](https://pt.wikipedia.org/wiki/Cross-site_request_forgery)
 
-##### <a name="aula_28"></a>Aula 28
 ---
+##### <a name="aula_28"></a>Aula 28
 
 ###### Descrição:
 Submissão de formulários do Django
@@ -360,8 +361,8 @@ Submissão de formulários do Django
 - Sempre que houver uma requisição na url dos detalhes do curso, django vai invocar o método details() em Course/views.py como definido em course/urls.py e lá pode ser tratado o tipo de request verificando request.method.
 - Quando o método is_valid() é executado, o acesso aos campos de form acontecem apenas via método cleaned_data que é um array associativo.
 
-##### <a name="aula_29"></a>Aula 29
 ---
+##### <a name="aula_29"></a>Aula 29
 
 ###### Descrição:
 Introdução para envio de E-mail, usando a submissão de formulários.
@@ -378,8 +379,8 @@ Introdução para envio de E-mail, usando a submissão de formulários.
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     ```
 
+    ---
 ##### <a name="aula_30"></a>Aula 30
----
 
 ###### Descrição:
 Configurando exibição envio de e-mail.
@@ -390,8 +391,8 @@ Configurando exibição envio de e-mail.
 - [```send_mail```](https://docs.djangoproject.com/en/2.0/topics/email/#send-mail) é uma função padrão de django, ver comentários para mais informações em forms para mais informações
 - As informações de envio de email podem ser encontradas [aqui](https://docs.djangoproject.com/en/2.0/topics/email/)
 
-##### <a name="aula_31"></a>Aula 31
 ---
+##### <a name="aula_31"></a>Aula 31
 
 ###### Descrição:
 Criando uma organização de envio de e-mails com Templates
@@ -401,10 +402,85 @@ Criando uma organização de envio de e-mails com Templates
 ###### <a name="notas_31"></a>Notas
 - Este método, lança um modelo html como email, podendo gerar e-mails interativos.
 
+---
 ### <a name="sessao_4"></a>Sessão 4
 ---
 #### Índice
 
+1. [Aula 32](#aula_32)
+
+---
+##### <a name="aula_32"></a>Aula 32
+
+
+###### Descrição:
+Introdução a sistemas de usuário.
+###### Procedimentos:
+1. Nem um procedimento.
+###### <a name="notas_32"></a>Notas
+- A biblioteca que Django usa para sistemas de usuário é [contrib.auth](https://docs.djangoproject.com/en/2.0/ref/contrib/auth/)
+
+##### <a name="aula_33"></a>Aula 33
+---
+
+###### Descrição:
+Como criar um url para logins do django.
+###### Procedimentos:
+1. E de novo, não usar uma string em urlpatterns.
+2. É preciso importar login do Django para aplicar em path.
+    - forma de importar
+    ```Python
+    from django.contrib.auth.views import login
+    ```
+###### <a name="notas_33"></a>Notas
+
+
+##### <a name="aula_34"></a>Aula 34
+---
+
+###### Descrição:
+Criando o template de cadastro.
+###### Procedimentos:
+1. Nem um procedimento que requer atenção. Igual a aula.
+###### <a name="notas_34"></a>Notas
+
+
+##### <a name="aula_35"></a>Aula 35
+---
+
+###### Descrição:
+Aplicando Formulários no template de cadastro.
+###### Procedimentos:
+1. Nem um procedimento que requer atenção. Igual a aula.
+###### <a name="notas_35"></a>Notas
+
+
+##### <a name="aula_36"></a>Aula 36
+---
+
+###### Descrição:
+Configurando o RegisterForm para conter e aceitar email no cadastro
+###### Procedimentos:
+1. Nem um procedimento que requer atenção. Igual a aula.
+###### <a name="notas_36"></a>Notas
+
+##### <a name="aula_37"></a>Aula 37
+---
+
+###### Descrição:
+Configurando RegisterForm para aceitar apenas e-mail único.
+###### Procedimentos:
+1. Nem um procedimento que requer atenção. Igual a aula.
+###### <a name="notas_37"></a>Notas
+
+##### <a name="aula_38"></a>Aula 38
+---
+
+###### Descrição:
+Criando e adicionando o logout no template.
+###### Procedimentos:
+1. Nem um procedimento que requer atenção. Igual a aula.
+###### <a name="notas_38"></a>Notas
 
 
 
@@ -421,7 +497,7 @@ Criando uma aula
 ---
 
 ###### Descrição:
-Crie uma descrição
+Crie uma descrição]
 ###### Procedimentos:
 1. digite os procedimentos
 2. siga sem detalhes
